@@ -46,7 +46,15 @@ Below is a schematic of the entire prism architecture.
 ![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/PRISM%20schematic.JPG)
 
 ## Datapath Testbench
+### 0-50 ns
 In this lab the testbench code was provided, as was the necessary internal signals.
 The functionality of the first 50ns of the simularion was cross refernenced with an exemplar picture.
 
 ![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/part2.JPG)
+### 50-100 ns
+
+In the first picture there are several things to pay attention to.
+A. Initially, reset equals 1 therefore no reinitalization takes place.
+B. At t = 50 ns, the data bus is equal to as assigned by the controller 3h. 
+C. At the next clock cycle, the value on the data bus is loaded onto the instruction register.
+![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/50-100ns.JPG)
