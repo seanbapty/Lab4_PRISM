@@ -1,7 +1,7 @@
 Lab4_PRISM
 ==========
 # ALU Simulation
-## Discussion of ALU Modifications
+## ALU Modifications
 The PRISM ALU (Arithmatic Logic Unit) was built to perform 8 operations including: AND, NEG (2s complement), NOT (invert), ROR, OR, IN, ADD, LD. Below is the output for a working ALU simulation. 
 
 The arithmatic operation performed on the operand by the ALU is controlled by the OPCODE, labeled OpSel below. The following list matches the opcode with the desired operation.
@@ -35,3 +35,6 @@ Result <= (Data and Accumulator) when OpSel = "000" else
 In order to test the functionality of the ALU it was run through a testbench provided be Capt Silva. The testbench cycled through all seven possible OpSels for various operands. The correctness of the ALU was then determined with a manual check. I.E. when the opcode is "100" is the Data "Ored" together?
 
 ![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/ALU%20out.JPG)
+
+## Datapath Modifications 
+The next task in the lab was to implement rest of the PRISM architecture. PRISM is composed of 5 main registers, the Information Register, the Memory Address Register High, the Memory Address Register Low, the Program Counter, and the Resiger Accumulator attached to the ALU.
