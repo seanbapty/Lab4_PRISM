@@ -14,4 +14,3 @@ The arithmatic operation performed by the ALU is controlled by the OPCODE, label
 |  5  |   : IN
 |  6  |   : ADD
 |  7  |   : LD
------------------------------
