@@ -37,4 +37,4 @@ In order to test the functionality of the ALU it was run through a testbench pro
 ![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/ALU%20out.JPG)
 
 ## Datapath Modifications 
-The next task in the lab was to implement rest of the PRISM architecture. PRISM is composed of 5 main registers, the Information Register, the Memory Address Register High, the Memory Address Register Low, the Program Counter, and the Resiger Accumulator attached to the ALU.
+The next task in the lab was to implement rest of the PRISM architecture. PRISM is composed of 5 main registers, the Instruction Register, the Memory Address Register High, the Memory Address Register Low, the Program Counter, and the Resiger Accumulator attached to the ALU. The instruction register stores the opcode of the current instruction based on input from the IR load signal, and then passes the output to the instruction register. The memory address register recieves data from the data bus and then sends that data to the address selector multiplexer. 
