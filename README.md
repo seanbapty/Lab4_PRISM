@@ -68,6 +68,7 @@ G. The value in the accumulator is then stored on the address on the output 00.
 A. The value in the IR register, B, corresponds to jump if the value in the accumulator is negative.
 B. The accumulator is equal to D in hex and therefore negative in 2s compliment.
 C. A jump occurs to the value at the address bus 02.
+![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/jumpat225ns.JPG)
 
 ### Program Listing
 Below is a table of all the functions the testbench performed.
@@ -77,19 +78,19 @@ Below is a table of all the functions the testbench performed.
 | LDAI        | B             | 
 | ROR         |	B             | 
 | OUT         | 03            |  
-| NOP         | s             | 
+| NOP         |               | 
 | STA         | 00            |
 | JN          | 2             | 
 | ROR         | D             | 
 | OUT         | 03            | 
-| NOP	      | s 	      |
+| NOP	      |   	      |
 | STA         | 09            |
 | JN          | E             |
 | ROR         | 7             |
 | OUT         | 03            |
-| NOP         | s             |
+| NOP         |               |
 | STA         | 09            |
-| JN          | s             |
+| JN          |               |
 | JMP         | 7             |
 
 # Documentation
