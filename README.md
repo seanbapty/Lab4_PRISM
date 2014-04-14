@@ -46,15 +46,20 @@ Below is a schematic of the entire prism architecture.
 ![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/PRISM%20schematic.JPG)
 
 ## Datapath Testbench
-### 0-50 ns
+### Simulation Analysis
+#### 0-50 ns
 In this lab the testbench code was provided, as was the necessary internal signals.
 The functionality of the first 50ns of the simularion was cross refernenced with an exemplar picture.
 
 ![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/part2.JPG)
-### 50-100 ns
+#### 50-100 ns
 
 In the first picture there are several things to pay attention to.
 A. Initially, reset equals 1 therefore no reinitalization takes place.
-B. At t = 50 ns, the data bus is equal to as assigned by the controller 3h. 
+B. At t = 50 ns, the data bus is equal to 3 as assigned by the controller 3h. 
 C. At the next clock cycle, the value on the data bus is loaded onto the instruction register.
+D. The IR register value of 3 corresponds to the ALU action ROR therefore, the value in the accumulator, B, is rotated one bit to the right making the new value in the accumulator D.
+E. At t = 80 ns, the data bus takes on the value 4.
+F. This 4 is passed to the IR register where the opcode 4 corresponds to OUT. 
+G. The value in the accumulator is then stored on the address on the output 00.
 ![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/50-100ns.JPG)
