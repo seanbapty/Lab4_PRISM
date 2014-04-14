@@ -63,3 +63,9 @@ E. At t = 80 ns, the data bus takes on the value 4.
 F. This 4 is passed to the IR register where the opcode 4 corresponds to OUT. 
 G. The value in the accumulator is then stored on the address on the output 00.
 ![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/50-100ns.JPG)
+
+#### Jump Instruction
+A. The value in the IR register, B, corresponds to jump if the value in the accumulator is negative.
+B. The accumulator is equal to D in hex and therefore negative in 2s compliment.
+C. A jump occurs to the value at the address bus 02.
+
