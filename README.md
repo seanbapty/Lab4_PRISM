@@ -69,3 +69,24 @@ A. The value in the IR register, B, corresponds to jump if the value in the accu
 B. The accumulator is equal to D in hex and therefore negative in 2s compliment.
 C. A jump occurs to the value at the address bus 02.
 
+### Program Listing
+Below is a table of all the functions the testbench performed.
+| Instruction | Operand       | 
+|-------------|---------------|
+| LDAI        | B             | 
+| ROR         |	B             | 
+| OUT         | 03            |  
+| NOP         | -             | 
+| STA         | 00            |
+| JN          | 2             | 
+| ROR         | D             | 
+| OUT         | 03            | 
+| NOP	      | -	      |
+| STA         | 09            |
+| JN          | E             |
+| ROR         | 7             |
+| OUT         | 03            |
+| NOP         | -             |
+| STA         | 09            |
+| JN          | -             |
+| JMP         | 7             |
