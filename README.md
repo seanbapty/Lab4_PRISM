@@ -76,17 +76,17 @@ Below is a table of all the functions the testbench performed.
 | LDAI        | B             | 
 | ROR         |	B             | 
 | OUT         | 03            |  
-| NOP         | -             | 
+| NOP         |               | 
 | STA         | 00            |
 | JN          | 2             | 
 | ROR         | D             | 
 | OUT         | 03            | 
-| NOP	      | -	      |
+| NOP	      |  	      |
 | STA         | 09            |
 | JN          | E             |
 | ROR         | 7             |
 | OUT         | 03            |
-| NOP         | -             |
+| NOP         |               |
 | STA         | 09            |
-| JN          | -             |
+| JN          |               |
 | JMP         | 7             |
