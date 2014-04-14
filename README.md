@@ -46,7 +46,51 @@ Below is a schematic of the entire prism architecture.
 ![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/PRISM%20schematic.JPG)
 
 ## Datapath Testbench
+### Simulation Analysis
+#### 0-50 ns
 In this lab the testbench code was provided, as was the necessary internal signals.
 The functionality of the first 50ns of the simularion was cross refernenced with an exemplar picture.
 
 ![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/part2.JPG)
+#### 50-100 ns
+
+In the first picture there are several things to pay attention to.
+A. Initially, reset equals 1 therefore no reinitalization takes place.
+B. At t = 50 ns, the data bus is equal to 3 as assigned by the controller 3h. 
+C. At the next clock cycle, the value on the data bus is loaded onto the instruction register.
+D. The IR register value of 3 corresponds to the ALU action ROR therefore, the value in the accumulator, B, is rotated one bit to the right making the new value in the accumulator D.
+E. At t = 80 ns, the data bus takes on the value 4.
+F. This 4 is passed to the IR register where the opcode 4 corresponds to OUT. 
+G. The value in the accumulator is then stored on the address on the output 00.
+![alt tag](https://raw.githubusercontent.com/seanbapty/Lab4_PRISM/master/50-100ns.JPG)
+
+#### Jump Instruction
+A. The value in the IR register, B, corresponds to jump if the value in the accumulator is negative.
+B. The accumulator is equal to D in hex and therefore negative in 2s compliment.
+C. A jump occurs to the value at the address bus 02.
+
+### Program Listing
+Below is a table of all the functions the testbench performed.
+
+| Instruction | Operand       | 
+|-------------|---------------|
+| LDAI        | B             | 
+| ROR         |	B             | 
+| OUT         | 03            |  
+| NOP         | s             | 
+| STA         | 00            |
+| JN          | 2             | 
+| ROR         | D             | 
+| OUT         | 03            | 
+| NOP	      | s 	      |
+| STA         | 09            |
+| JN          | E             |
+| ROR         | 7             |
+| OUT         | 03            |
+| NOP         | s             |
+| STA         | 09            |
+| JN          | s             |
+| JMP         | 7             |
+
+# Documentation
+None
