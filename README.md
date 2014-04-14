@@ -71,6 +71,7 @@ C. A jump occurs to the value at the address bus 02.
 
 ### Program Listing
 Below is a table of all the functions the testbench performed.
+
 | Instruction | Operand       | 
 |-------------|---------------|
 | LDAI        | B             | 
